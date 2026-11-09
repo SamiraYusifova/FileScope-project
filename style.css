@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@500;700&display=swap");
+
+/* Cards: every st.container whose key starts with "card_" */
+div[class*="st-key-card_"] {
+  background: #ffffff;
+  border: 2px solid #111111 !important;
+  border-radius: 0 !important;
+  box-shadow: 4px 4px 0 #111111;
+}
+
+/* Buttons: uppercase mono, black border, hard shadow; they "press" when clicked */
+.stButton button,
+.stDownloadButton button,
+.stFormSubmitButton button,
+div[data-testid="stPopover"] button {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid #111111 !important;
+  border-radius: 0 !important;
+  box-shadow: 2px 2px 0 #111111;
+}
+.stButton button:active,
+.stDownloadButton button:active,
+.stFormSubmitButton button:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+.stFormSubmitButton button {
+  color: #111111 !important;
+}
+
+/* History items: show the SQL in mono, left-aligned, no shadow */
+div[class*="st-key-history_"] button {
+  text-transform: none;
+  font-weight: 400;
+  box-shadow: none;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+/* SQL editor */
+textarea {
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 14px !important;
+}
+.sql-label {
+  background: #111111;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 26px 0;
+}
+.sql-error {
+  color: #c62828;
+  background: transparent;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  white-space: pre-wrap;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.logo {
+  background: #111111;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  padding: 4px 10px;
+}
+.brand {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 18px;
+}
+.crumb {
+  color: #6b675f;
+  border-left: 2px solid #111111;
+  padding-left: 14px;
+}
+.crumb b {
+  color: #111111;
+}
+
+/* Small grey mono text: meta lines, row ranges, timing */
+.meta {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #6b675f;
+}
+.right {
+  text-align: right;
+}
+
+/* Card titles and tags */
+.card-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.count {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid #111111;
+  box-shadow: 2px 2px 0 #111111;
+  padding: 1px 6px;
+}
+.tag.yellow { background: #ffd84d; }
+.tag.orange { background: #ee6a2b; }
+.tag.blue { background: #2f3fe0; color: #ffffff; }
