@@ -21,7 +21,7 @@ db=connection.cursor()
 state=st.session_state
 
 defaults={"table":None, "sql_text":"", "base_sql":None,"total_rows":0,"query_ms":None,
-            "error": None, "history":[],"page": 1,"brush":(25,44),"brush_seen":None}
+            "error": None, "history":[],"page": 1,"brush":None,"brush_seen":None}
 for key,value in defaults.items():
     state.setdefault(key,value)
 
